@@ -9,13 +9,17 @@ html {
 body {
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .page-wraper {
-    width: clamp(375px, 86%, 1400px);
+    width: clamp(375px, 95%, 1400px);
     margin: auto;
     height: 100%;
-    /* background-color: grey; */
+}
+
+section {
+    margin-top: 50px;
 }
 
 .section-title {
@@ -27,6 +31,47 @@ body {
 .subtitle {
     font-size: 1.125rem;
     font-weight: 700;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.card-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-link:visited {
+    color: initial;
+}
+
+.card-title {
+    font-size: 1.0625rem;
+    margin: 4px 0 0 0;
+}
+
+
+.card-description {
+    margin-left: 3%;
+}
+
+.card-price {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.card-score {
+    color: #0065FC;
+    font-size: 0.7rem;
+}
+
+.card-score i:nth-child(5) {
+    color: #D9D9D9;
 }
 
 /*LOGO NAV BAR */
@@ -134,7 +179,7 @@ border-right: none;
     font-weight: 700;
     display: flex;
     align-items: center;
-    margin-left: 40px;     
+    margin-left: 2%;     
     white-space: nowrap;  
 }
   
@@ -168,5 +213,158 @@ border-right: none;
     font-size: 0.65rem;
     color: #0065FC;
     vertical-align: middle;
-    
+}
+
+/* HOTEL SELECTION */
+
+.home-wraper .section-title {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.home-wraper .subtitle {
+    margin: 40px 5%;
+    text-decoration: none;
+    color: black;
+}
+
+
+.fa-chart-line {
+    color: #0065FC;
+}
+
+.home-wraper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.home {
+    width: clamp(800px, 60%, 1400px);
+    background-color: #D9D9D9;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+  
+.popular {
+    width: max(280px, 23%);
+    background-color: #D9D9D9;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+  
+.home-grid {
+    display: grid;
+    justify-content: center;
+    width: 90%;
+    grid-template: 199px / repeat(auto-fit, minmax(246px, 1fr));
+    grid-auto-rows: 199px;
+    margin: 30px auto;
+    gap: 25px;
+}
+  
+.popular-grid {
+    display: grid;
+    width: 90%;
+    grid-template: 144px / repeat(auto-fit, minmax(252px, 1fr));
+    /* grid-auto-columns: minmax(252px, 343px); */
+    grid-auto-rows: 144px;
+    margin: 30px auto;
+    gap: 30px 20px;
+}
+  
+  
+.home-grid .card-image {
+    width: 100%;
+    height: 123px;
+    object-fit: cover;
+    box-sizing: border-box;
+  /*   max-height: 62%; */
+  /*   overflow: hidden; */
+    border: 4px solid white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.popular-grid .card-image {
+    width: clamp(96px, 40%, 127px);
+    height: 144px;
+    object-fit: cover;
+    box-sizing: border-box;
+  /*   max-height: 62%; */
+  /*   overflow: hidden; */
+    border: 4px solid white;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.popular-grid .card-link {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.popular-grid .card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.popular-grid .card-score {
+    margin-bottom: 10px;
+    margin-top: 45px;
+}
+
+/* ACTIVITY SELECTION */
+
+.activity-grid {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template: minmax(190px, 1fr) / repeat(auto-fit, minmax(182px, 1fr));
+    gap: 20px 3%;
+}
+
+.activity-grid .card-image {
+    width: 100%;
+    height: 389px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.activity-grid .card-title {
+    padding: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    margin-top: 60px;
+    padding: 45px 0;
+    background-color: #F2F2F2;
+    display: flex;
+    column-gap: 15%;
+}
+
+.footer-section:nth-child(1) {
+    margin-left: 70px;
+}
+
+.footer-section-list {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.footer-section-list a {
+    text-decoration: none;
+    color: initial;
+}
+
+.footer-section-list li {
+    margin-bottom: 12px;
 }
