@@ -33,6 +33,11 @@ section {
     font-weight: 700;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 .card {
     background-color: white;
     border-radius: 20px;
@@ -40,20 +45,14 @@ section {
 }
 
 .card-link {
-    text-decoration: none;
     display: flex;
     flex-direction: column;
-}
-
-.card-link:visited {
-    color: initial;
 }
 
 .card-title {
     font-size: 1.0625rem;
     margin: 4px 0 0 0;
 }
-
 
 .card-description {
     margin-left: 3%;
@@ -95,7 +94,6 @@ section {
 
 .header-top-nav-item {
     padding: 38.1px 20px 39px 20px;
-    text-decoration: none;
     color: black;
     font-weight: 400px;
 }
@@ -228,7 +226,6 @@ border-right: none;
 
 .home-wraper .subtitle {
     margin: 40px 5%;
-    text-decoration: none;
     color: black;
 }
 
@@ -247,14 +244,14 @@ border-right: none;
 
 .home {
     width: clamp(800px, 60%, 1400px);
-    background-color: #D9D9D9;
+    background-color: #F2F2F2;
     flex-grow: 1;
     border-radius: 20px;
 }
   
 .popular {
     width: max(280px, 23%);
-    background-color: #D9D9D9;
+    background-color: #F2F2F2;
     flex-grow: 1;
     border-radius: 20px;
 }
@@ -358,11 +355,6 @@ footer {
     list-style: none;
     margin-top: 20px;
     padding: 0;
-}
-
-.footer-section-list a {
-    text-decoration: none;
-    color: initial;
 }
 
 .footer-section-list li {

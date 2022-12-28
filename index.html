@@ -14,14 +14,17 @@
     <div class="page-wraper">
         <header>
             <div class="header-top">
-                <img src="images/logo/Booki.png" width="61" height="19" alt="logo booki" class="header-top-logo">
+                <img srcset="images/logo/Booki.png,
+                             images/logo/Booki@3x.png" 
+                    src="images/logo/Booki.png" width="61" height="19" alt="logo booki" 
+                    class="header-top-logo">
                 <nav>
                     <ul class="header-top-nav">
                         <li>
-                            <a href="#" class="header-top-nav-item">Hébergements</a>
+                            <a href="#home-anchor" class="header-top-nav-item">Hébergements</a>
                         </li>
                         <li>
-                            <a href="#" class="header-top-nav-item">Activités</a>
+                            <a href="#activity-anchor" class="header-top-nav-item">Activités</a>
                         </li>
                     </ul>
                 </nav>
@@ -53,7 +56,7 @@
             </div>
         </header>
         <main>
-            <section class="home-wraper">
+            <section class="home-wraper" id="home-anchor">
                 <div class="home">
                     <h2 class="section-title">Hebergements à Marseille</h2>
                     <div class="home-grid">
@@ -239,15 +242,15 @@
                     </div>
                 </div>
             </section>
-            <section class="activity">
+            <section class="activity" id="activity-anchor">
                 <h2 class="section-title">Activités à Marseille</h2>
                 <div class="activity-grid">
                     <article class="card">
                         <a href="#" class="card-link">
-                            <img srcset="images/activites/3_medium/reno-laithienne-qUgJhdY5Fyk-unsplash.jpg,
-                                         images/activites/2_large/reno-laithienne-qUgJhdY5Fyk-unsplash.jpg 2x,
-                                         images/activites/1_xlarge/reno-laithienne-qUgJhdY5Fyk-unsplash.jpg 3x" 
-                                src="images/activites/2_large/reno-laithienne-qUgJhdY5Fyk-unsplash.jpg" 
+                            <img srcset="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg,
+                                         images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg 2x,
+                                         images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg 3x" 
+                                src="images/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" 
                                 alt="vieux-port hotel image"
                                 class="card-image" >
                             <h3 class="card-title">Vieux-Port</h3>
