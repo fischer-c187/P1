@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
 html {
     height: 100%;
@@ -64,13 +64,17 @@ a {
     margin: 8px 0;
 }
 
+.grey-star {
+    color: #D9D9D9;
+}
+
 .card-score {
     color: #0065FC;
     font-size: 0.7rem;
 }
 
-.card-score i:nth-child(5) {
-    color: #D9D9D9;
+.price-symbol {
+    font-weight: 600;
 }
 
 /*LOGO NAV BAR */
@@ -270,7 +274,6 @@ border-right: none;
     display: grid;
     width: 90%;
     grid-template: 144px / repeat(auto-fit, minmax(252px, 1fr));
-    /* grid-auto-columns: minmax(252px, 343px); */
     grid-auto-rows: 144px;
     margin: 30px auto;
     gap: 30px 20px;
@@ -282,8 +285,6 @@ border-right: none;
     height: 123px;
     object-fit: cover;
     box-sizing: border-box;
-  /*   max-height: 62%; */
-  /*   overflow: hidden; */
     border: 4px solid white;
     border-radius: 20px 20px 0px 0px;
 }
@@ -293,8 +294,6 @@ border-right: none;
     height: 144px;
     object-fit: cover;
     box-sizing: border-box;
-  /*   max-height: 62%; */
-  /*   overflow: hidden; */
     border: 4px solid white;
     border-radius: 20px 0px 0px 20px;
 }
@@ -305,14 +304,22 @@ border-right: none;
 }
 
 .popular-grid .card-description {
+    max-width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.card-description-text {
+    margin-top: 15px;
 }
 
 .popular-grid .card-score {
     margin-bottom: 10px;
-    margin-top: 45px;
+}
+
+.card-description-text {
+    margin-top: 15px;
 }
 
 /* ACTIVITY SELECTION */
