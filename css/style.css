@@ -38,6 +38,10 @@ a {
     text-decoration: none;
 }
 
+.desktop-hidden {
+    display: none;
+}
+
 .card {
     background-color: white;
     border-radius: 20px;
@@ -88,6 +92,7 @@ a {
 
 .header-top-nav {
     margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
 }
@@ -159,9 +164,9 @@ a {
 }
 
 .header-search-bar:focus {
-outline: none;
-border: 2px solid #0065FC;
-border-right: none;
+    outline: none;
+    border: 2px solid #0065FC;
+    border-right: none;
 }
 
 /* FILTER */
@@ -171,7 +176,7 @@ border-right: none;
     margin-top: 30px;
     margin-bottom: 20px;
 }
-  
+
 .header-filter-button {
     background-color: white;
     border: 2px solid #D9D9D9;
@@ -203,8 +208,8 @@ border-right: none;
 }
 
 .header-info-boxicon {
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     border: 1px solid #D9D9D9;
     border-radius: 50%;
     text-align: center;
@@ -325,6 +330,12 @@ border-right: none;
 
 /* ACTIVITY SELECTION */
 
+.activity {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .activity-grid {
     width: 100%;
     margin-top: 20px;
@@ -350,16 +361,17 @@ border-right: none;
 footer {
     width: 100%;
     margin-top: 60px;
-    padding: 45px 0;
+    padding: 45px 5%;
     background-color: #F2F2F2;
     display: flex;
     column-gap: 15%;
+    /* padding-left: 5%; */
 }
 
 
-.footer-section:nth-child(1) {
+/* .footer-section:nth-child(1) {
     margin-left: 5%;
-}
+} */
 
 .footer-section-list {
     list-style: none;
@@ -389,7 +401,7 @@ footer {
 
     .popular-grid {
         width: 95%;
-        grid-template: 144px / repeat(auto-fit, minmax(200px, 1fr));
+        grid-template: 144px / repeat(auto-fit, minmax(210px, 1fr));
         gap: 15px;
     }
 
@@ -401,10 +413,10 @@ footer {
     .card-description-text {
         margin-top: 5px;
     }
+
     .activity-grid {
         grid-template: minmax(190px, 1fr) / repeat(auto-fit, minmax(100px, 1fr));
     }
-
 
     .activity-grid .card-image {
         height: 211px;
@@ -413,4 +425,156 @@ footer {
     footer {
         gap: 10%;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .page-wraper {
+        width: max(375px, 100%);
+    }
+    
+    .header-top  {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    
+    .header-top-logo {
+        margin-top: 5%;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .header-top-nav li {
+        width: 50%;
+        text-align: center;
+    }
+
+    .header-top-nav li:nth-child(1) {
+        margin-right: 0;
+    }
+    
+    .header-top-nav-item {
+        display: block;
+        width: 100%;
+        padding: 23px 0;
+        border-bottom: 3px solid #F2F2F2;
+    }
+
+    .header-top-nav-item:hover {
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+    }
+
+    .desktop-hidden {
+        display: inline;
+    }
+
+    .mobil-hidden {
+        display: none;
+    }
+
+    .header-search {
+        margin-top: 30px;
+    }
+
+    .header-description {
+        margin-right: 5.3%;
+        margin-left: 5.3%;
+    }
+
+    .header-search-form {
+        margin-left: 5.3%;
+        margin-right: 5.3%;
+    }
+
+    .header-search-bar {
+        max-width: 232px;
+        flex-shrink: 1;
+    }
+
+    .header-filter {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 15px;
+        margin: 15px 5.3%;
+    }
+
+    .header-filter .subtitle {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .header-filter-button {
+        font-size: 0.8rem;
+        width: 160px;
+        height: 50px;
+        margin: 0;
+    }
+
+    .header-filter-button i {
+        font-size: 1.25rem;
+        margin-right: 5px;
+    }
+
+    .header-info {
+        margin: 30px 5.3%;
+        font-size: 1.06rem;
+    }
+
+    .header-info-icon {
+        font-size: 0.8rem;
+    }
+
+    .popular {
+        order: -1;
+        border-radius: 0;
+    }
+
+    .popular-grid {
+        width: 90%;
+    }
+
+    .home {
+        background-color: white;
+    }
+
+    .home-grid {
+        width: 90%;
+    }
+
+    .home .section-title {
+        margin-top: 0;
+    }
+
+    .home .subtitle {
+        display: none;
+    }
+
+    .activity {
+        margin-top: 0;
+    }
+
+    .activity .section-title {
+        margin-left: 5.3%;
+    }
+
+    .activity-grid {
+        width: 90%;
+        margin: 0 auto;
+        grid-template: 199px / repeat(auto-fit, minmax(220px, 1fr));
+        grid-auto-rows: 199px;
+    }
+
+    .activity-grid .card-image {
+        max-height: 134px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
 }
