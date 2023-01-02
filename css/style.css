@@ -9,7 +9,6 @@ html {
 body {
     height: 100%;
     margin: 0;
-    overflow-x: hidden;
 }
 
 .page-wraper {
@@ -17,6 +16,8 @@ body {
     margin: auto;
     height: 100%;
 }
+
+/* FACTORISATION */
 
 section {
     margin-top: 50px;
@@ -42,6 +43,8 @@ a {
     display: none;
 }
 
+/* CARD SETTINGS */
+
 .card {
     background-color: white;
     border-radius: 20px;
@@ -62,20 +65,29 @@ a {
     margin-left: 3%;
 }
 
+.card-description-text {
+    margin-top: 15px;
+}
+
+.price-symbol {
+    font-weight: 600;
+}
+
 .card-price {
     font-size: 0.875rem;
     font-weight: 400;
     margin: 8px 0;
 }
 
-.grey-star {
-    color: #D9D9D9;
-}
-
 .card-score {
     color: #0065FC;
     font-size: 0.7rem;
 }
+
+.grey-star {
+    color: #D9D9D9;
+}
+
 
 .price-symbol {
     font-weight: 600;
@@ -97,18 +109,14 @@ a {
     display: flex;
 }
 
-.header-top-nav li:nth-child(1) {
-    margin-right: 67px;
-}
-
 .header-top-nav-item {
-    padding: 38.1px 20px 39px 20px;
+    padding: 38px 30px;
     color: black;
     font-weight: 400;
 }
 
 .header-top-nav-item:hover {
-    border-top: 2px solid #0065FC;
+    border-top: 3px solid #0065FC;
     color: #0065FC;
 }
 
@@ -207,6 +215,7 @@ a {
     align-items: center;
 }
 
+/*  create circle around an icon */
 .header-info-boxicon {
     min-width: 24px;
     min-height: 24px;
@@ -224,10 +233,18 @@ a {
 
 /* HOTEL SELECTION */
 
+.home-wraper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
 .home-wraper .section-title {
     margin-left: 5%;
     margin-right: 5%;
-    display: flex;
+    display: flex;  /* aligns the title and icon in popular */
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
@@ -238,19 +255,6 @@ a {
     color: black;
 }
 
-
-.fa-chart-line {
-    color: #0065FC;
-}
-
-.home-wraper {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-
 .home {
     width: clamp(800px, 60%, 1400px);
     background-color: #F2F2F2;
@@ -258,24 +262,35 @@ a {
     border-radius: 20px;
     padding-bottom: 40px;
 }
-  
-.popular {
-    width: max(280px, 23%);
-    background-color: #F2F2F2;
-    flex-grow: 1;
-    border-radius: 20px;
-}
-  
+
 .home-grid {
     display: grid;
-    justify-content: center;
     width: 90%;
     grid-template: 199px / repeat(auto-fit, minmax(246px, 1fr));
     grid-auto-rows: 199px;
     margin: 30px auto;
     gap: 25px;
 }
-  
+
+.home-grid .card-image {
+    height: 123px;
+    object-fit: cover;
+    box-sizing: border-box;
+    border: 4px solid white;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.fa-chart-line {
+    color: #0065FC;
+}
+
+.popular {
+    width: max(280px, 23%);
+    background-color: #F2F2F2;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+
 .popular-grid {
     display: grid;
     width: 90%;
@@ -284,17 +299,7 @@ a {
     margin: 30px auto;
     gap: 30px 20px;
 }
-  
-  
-.home-grid .card-image {
-    width: 100%;
-    height: 123px;
-    object-fit: cover;
-    box-sizing: border-box;
-    border: 4px solid white;
-    border-radius: 20px 20px 0px 0px;
-}
-
+ 
 .popular-grid .card-image {
     width: clamp(96px, 40%, 127px);
     height: 144px;
@@ -316,36 +321,21 @@ a {
     justify-content: space-between;
 }
 
-.card-description-text {
-    margin-top: 15px;
-}
-
 .popular-grid .card-score {
     margin-bottom: 10px;
 }
 
-.card-description-text {
-    margin-top: 15px;
-}
-
 /* ACTIVITY SELECTION */
-
-.activity {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
 
 .activity-grid {
     width: 100%;
     margin-top: 20px;
     display: grid;
-    grid-template: minmax(190px, 1fr) / repeat(auto-fit, minmax(182px, 1fr));
+    grid-template: 1fr / repeat(auto-fit, minmax(182px, 1fr));
     gap: 20px 3%;
 }
 
 .activity-grid .card-image {
-    width: 100%;
     height: 389px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
@@ -359,19 +349,13 @@ a {
 /* FOOTER */
 
 footer {
-    width: 100%;
+    max-width: 100%;
     margin-top: 60px;
     padding: 45px 5%;
     background-color: #F2F2F2;
     display: flex;
     column-gap: 15%;
-    /* padding-left: 5%; */
 }
-
-
-/* .footer-section:nth-child(1) {
-    margin-left: 5%;
-} */
 
 .footer-section-list {
     list-style: none;
@@ -415,7 +399,7 @@ footer {
     }
 
     .activity-grid {
-        grid-template: minmax(190px, 1fr) / repeat(auto-fit, minmax(100px, 1fr));
+        grid-template: 1fr / repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .activity-grid .card-image {
