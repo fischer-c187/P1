@@ -415,7 +415,7 @@ footer {
     .page-wraper {
         width: max(375px, 100%);
     }
-    
+
     .header-top  {
         flex-direction: column;
         align-items: center;
@@ -519,7 +519,8 @@ footer {
     }
 
     .popular-grid {
-        width: 90%;
+        grid-template: repeat(3, 144px) / 1fr;
+        width: 89.4%;
     }
 
     .home {
@@ -527,7 +528,8 @@ footer {
     }
 
     .home-grid {
-        width: 90%;
+        grid-template: repeat(4, 199px) / 1fr;
+        width: 89.4%;
     }
 
     .home .section-title {
@@ -542,19 +544,22 @@ footer {
         margin-top: 0;
     }
 
-    .activity .section-title {
-        margin-left: 5.3%;
+    .activity .section-title { 
+        margin-left: 5.3%; 
     }
-
+    
     .activity-grid {
-        width: 90%;
+        width: 89.4%;
         margin: 0 auto;
-        grid-template: 199px / repeat(auto-fit, minmax(220px, 1fr));
-        grid-auto-rows: 199px;
+        grid-template: repeat(4, 199px) / 1fr;
     }
 
     .activity-grid .card-image {
         max-height: 134px;
+    }
+
+    .activity-grid .card-title {
+        margin-top: 20px;
     }
 
     footer {
